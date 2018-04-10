@@ -1,0 +1,11 @@
+/*
+ * Chipsee Information Technology Co., Ltd.
+ * http://www.chipsee.com
+ * lxq <lxq@chipsee.com>
+ */
+
+#include "imx6ul-eisd.dts"
+
+/ {
+	model = "Chipsee i.MX6 UltraLite IPC Board (MEM:512M)";
+};

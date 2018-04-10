@@ -1,0 +1,6 @@
+#!/bin/sh
+#make imx6_7ft_defconfig
+#make imx6_7ft_has_console_logo_defconfig
+make -j8 zImage modules dtbs
+cp arch/arm/boot/zImage zImage
+cp arch/arm/boot/dts/imx6q-sabresd-logo-lvds-ipu1-di0.dtb imx6q-sabresd.dtb

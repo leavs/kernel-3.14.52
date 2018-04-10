@@ -1,0 +1,7 @@
+#!/bin/sh
+make clean
+make imx6ul_eisd_defconfig
+make -j8 zImage modules dtbs
+cp arch/arm/boot/zImage zImage-6ul
+cp arch/arm/boot/dts/imx6ul-eisd.dtb imx6ul-eisd.dtb
+cp arch/arm/boot/dts/imx6ul-eisd-1g.dtb imx6ul-eisd-1g.dtb

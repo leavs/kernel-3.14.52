@@ -1,0 +1,27 @@
+#
+# humidity sensor drivers
+#
+menu "Humidity sensors"
+
+config DHT11
+	tristate "DHT11 (and compatible sensors) driver"
+	depends on GPIOLIB
+	help
+	  This driver supports reading data via a single interrupt
+	  generating GPIO line. Currently tested are DHT11 and DHT22.
+	  Other sensors should work as well as long as they speak the
+	  same protocol.
+
+config HDC100X
+        tristate "TI HDC100x relative humidity and temperature sensor"
+        depends on I2C
+        select IIO_BUFFER
+        select IIO_TRIGGERED_BUFFER
+        help
+          Say yes here to build support for the Texas Instruments
+          HDC1000 and HDC1008 relative humidity and temperature sensors.
+
+          To compile this driver as a module, choose M here: the module
+          will be called hdc100x.
+
+endmenu
